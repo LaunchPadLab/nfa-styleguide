@@ -1,0 +1,81 @@
+.card-error{
+  position: relative;
+
+  .error-message{
+    background-color: $red-base;
+    color: $white-base;
+    padding: 5px 20px 5px 10px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    @include position(absolute, 28px -10px null null);
+
+    &:after{
+      content: "";
+      @include triangle(10px 9px, $red-dark #F1F2F4, up-left);
+      @include position(absolute, null 0px -9px null);
+    }
+  }
+}
+
+
+/*-----------------------
+Card
+-----------------------*/
+
+.card{
+  background-color: $white-base;
+  border: 1px solid $blue-grey-med;
+
+  .card-header{
+    background-color: $blue-grey-light;
+    border-bottom: 1px solid $blue-grey-med;
+    padding: 20px;
+    display: inline-block;
+    width: 100%;
+
+    @include media($tablet){
+      padding: 20px 30px;
+    }
+
+    h3{
+      color: $black-base;
+    }
+
+    button{
+      display: block;
+      margin-top: 10px;
+
+      @include media($tablet){
+        float: right;
+        margin-top: -7px;
+      }
+    }
+  }
+
+  .header-block{
+    h3{
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+  }
+
+  .card-inner{
+    display: inline-block;
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+
+    @include media($tablet){
+      padding: 30px;
+    }
+  }
+}
+
+.interior{
+  background-color: $blue-grey-light;
+  border-top: 1px solid $blue-grey-med;
+
+  .container{
+    padding: 50px 15px 30px;
+  }
+}

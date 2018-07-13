@@ -1,0 +1,203 @@
+// Buttons Component Styles
+// ========================================
+
+// Main Button
+@mixin button{
+  border-radius: 3px;
+  display: inline-block;
+  @include font-type($primary-sans-serif, normal, normal);
+  @include rem(padding, 8px 15px);
+  @include s-base;
+  @include transition (all 0.3s ease-in-out);
+  line-height: normal;
+  min-width: 170px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+
+  &[class*=-outline]{
+    box-shadow: none;
+  }
+
+  text{
+    align: center;
+    decoration: none;
+  }
+  -webkit-appearance: none;
+
+  &:hover{ cursor: pointer; }
+
+  &:focus{
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+
+// Button Styles
+@each $button in $buttons{
+  $type:        nth($button, 1);
+  $bg-1:        nth($button, 2);
+  $border:      nth($button, 3);
+  $color:       nth($button, 4);
+  $hover-bg:    nth($button, 5);
+  $hover-color: nth($button, 6);
+
+  .button-#{$type}{
+    background-color: $bg-1;
+    border: 1px solid $border;
+    color: $color;
+    @include button;
+
+    &:hover{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: $hover-color;
+      opacity: 1;
+    }
+
+    &:active{
+      background-color: $hover-bg;
+      border: 1px solid $hover-bg;
+      color: darken($hover-color, 5%);
+    }
+
+    &:focus{ border: 1px solid $hover-bg; }
+
+    &.is-disabled{
+      opacity: 0.4;
+      cursor: not-allowed;
+
+      &:hover{
+        background-color: $bg-1;
+        border: 1px solid $border;
+        color: $color;
+      }
+    }
+
+    &.in-progress{
+      pointer-events: none;
+      color: transparent;
+      position: relative;
+
+      span{
+        color: transparent;
+      }
+
+      .arrow{
+        display: none;
+        opacity: 0;
+      }
+
+      &:after{
+         border: 2px solid rgba(255,255,255,1);
+         border-radius: 50%;
+         border-right-color: transparent;
+         border-top-color: transparent;
+         content:"";
+         display: block;
+         height: 20px;
+         @include animation(spin 0.5s linear infinite);
+         margin: 0 calc((100% - 50px)/2);
+         position: absolute;
+         top: 10px;
+         width: 20px;
+      }
+
+      &[class*=-primary-outline], &[class*=-white], &[class*=-secondary-outline]{
+        &:after{
+          border: 2px solid $purple-base;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+      }
+
+      &[class*=-alert-outline]{
+        &:after{
+          border: 2px solid $yellow-base;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+      }
+
+      &[class*=-grey]{
+        &:after{
+          border: 2px solid $black-base;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+      }
+
+      &[class*=-grey-outline]{
+        &:after{
+          border: 2px solid $grey-base;
+          border-right-color: transparent;
+          border-top-color: transparent;
+        }
+      }
+    }
+  }
+
+  // Links
+  .link-#{$type}{
+    color: $bg-1;
+    display: inline-block;
+    @include s-base;
+    @include font-type($primary-sans-serif, normal, normal);
+    @include transition(all 0.3s ease-in-out);
+    @include rem(margin-top, 5px);
+    text-decoration: none;
+
+    &:hover{
+      color: $hover-bg;
+    }
+  }
+}
+
+.link-black-base{
+  font-weight: $bold;
+}
+
+
+// Buton Sizes
+.button-small {
+  @include rem(padding, 5px 10px);
+  min-width: inherit;
+  @include s-tiny;
+}
+
+.button-large-img {
+
+  &.button-grey-outline-filled img{
+    max-height: 50px;
+  }
+}
+
+.button-grey-outline-filled{
+  img{
+    max-height: 25px;
+    margin-right: 15px;
+    width: auto;
+    height: auto;
+    max-width: 60px;
+    vertical-align: middle;
+  }
+
+  &.in-progress{
+    img{
+      display: none;
+    }
+  }
+}
+
+// With image
+.button-primary{
+  img{
+    display: inline-block;
+    height: 20px;
+    margin-left: 5px;
+    width: auto;
+    vertical-align: middle;
+  }
+}

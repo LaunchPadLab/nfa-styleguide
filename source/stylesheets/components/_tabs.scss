@@ -1,0 +1,91 @@
+/*-----------------------
+Tabs
+-----------------------*/
+
+.tabs{
+  border-bottom: 1px solid transparent;
+  display: inline-block;
+  @include rem(margin-bottom, 1px);
+  width: auto;
+
+  li{
+    display: inline-block;
+  }
+
+  .tab-link{
+    cursor: pointer;
+    display: inline-block;
+    @include rem(padding, 0px 20px 15px);
+    margin-bottom: -2px;
+    text-align: center;
+    text-decoration: none;
+    color: $grey-base;
+    @include s-medium;
+
+    &.is-active{
+      border-bottom: 8px solid $purple-base;
+      color: $white-base;
+    }
+  }
+
+  .tab-header-and-content{
+    @include media($tablet){
+      display: inline;
+    }
+  }
+}
+
+
+/*-----------------------
+Tabs with Icons
+-----------------------*/
+.tabs.with-icons{
+
+  li{
+    margin-bottom: 20px;
+
+    &:not(:last-child){
+      border-right: 1px solid $white-dark;
+      margin-right: 10px;
+      padding-right: 10px;
+    }
+
+    &.is-active{
+      a{
+        img{
+          background-color: $purple-base;
+        }
+
+        p{
+          color: $purple-base;
+        }
+      }
+    }
+  }
+
+  .tab-link{
+    border: none;
+    padding: 0px;
+  }
+
+  a{
+    text-decoration: none;
+
+    img{
+      background-color: $black-dark;
+      border-radius: 20em;
+      display: inline-block;
+      height: 40px;
+      padding: 5px;
+      margin-right: 10px;
+      width: 40px;
+      vertical-align: middle;
+    }
+
+    p{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+  }
+}
