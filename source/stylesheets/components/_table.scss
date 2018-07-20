@@ -1,47 +1,17 @@
 /*-----------------------
 Table
 -----------------------*/
-.scrollable-table{
-  margin-top: 20px;
+.card{
   overflow: auto;
+}
+.scrollable-table{
+
 
   table{
     width: 100%;
-    white-space: pre;
 
-    tr{
-      &.summary-row{
-        background-color: #F6F7F8;
-      }
-    }
-
-    thead{
-      th{
-        background-color: $black-base;
-        color: $white-base;
-        font-weight: $bold;
-      }
-    }
-
-    tr:nth-child(even){
-      background-color: $white-med;
-    }
-
-    th, td{
-      @include font-type($primary-sans-serif, normal, $regular);
-      text-align: left;
-      padding: 15px;
-      position: relative;
-      @include s-base;
-
-      small{
-        @include s-tiny;
-      }
-
-      i, img{
-        vertical-align: middle;
-        margin: 0px 5px 0px 0px;
-      }
+    th{
+      white-space: nowrap;
     }
   }
 }
@@ -345,6 +315,16 @@ th .sort-by {
   margin-top: 1px;
 }
 
+.card-inner th .sort-by {
+  &.ascending:before{
+    border-bottom-color: $blue-grey-base;
+  }
+
+  &.descending:after{
+    border-top-color: $blue-grey-base;
+  }
+}
+
 /*-----------------------
 Table Filter
 -----------------------*/
@@ -383,5 +363,26 @@ Table Filter
   @include media($tablet-landscape){
     max-width: 180px;
     display: inline-block;
+  }
+}
+
+.card{
+  table{
+    td{
+      vertical-align: top;
+
+      ul{
+        padding-left: 20px;
+        margin-bottom: 0px;
+      }
+
+      a{
+        color: $black-base;
+
+        &:hover{
+          color: $green-base;
+        }
+      }
+    }
   }
 }
