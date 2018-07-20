@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>0013-apartment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="ruling-copy" transform="translate(-40.000000, -41.000000)" fill-rule="nonzero">
+            <g id="0013-apartment" transform="translate(40.000000, 40.000000)">
+                <polygon id="Shape" fill="#FFFFFF" points="6 7 7 7 7 8 6 8"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="6 9 7 9 7 10 6 10"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="6 11 7 11 7 12 6 12"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="6 13 7 13 7 14 6 14"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="6 17 7 17 7 18 6 18"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="6 15 7 15 7 16 6 16"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 7 5 7 5 8 4 8"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 9 5 9 5 10 4 10"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 11 5 11 5 12 4 12"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 13 5 13 5 14 4 14"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 17 5 17 5 18 4 18"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="4 15 5 15 5 16 4 16"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 7 9 7 9 8 8 8"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 9 9 9 9 10 8 10"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 11 9 11 9 12 8 12"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 13 9 13 9 14 8 14"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 17 9 17 9 18 8 18"></polygon>
+                <polygon id="Shape" fill="#FFFFFF" points="8 15 9 15 9 16 8 16"></polygon>
+                <path d="M18.5,20 L18,20 L18,6.5 C18,5.737 17.433,4.951 16.709,4.709 L12,3.139 L12,1.499 C12,1.341 11.925,1.192 11.798,1.098 C11.671,1.004 11.507,0.975 11.356,1.02 L2.314,3.733 C1.577,3.954 1,4.73 1,5.499 L1,19.999 L0.5,19.999 C0.224,19.999 0,20.223 0,20.499 C0,20.775 0.224,20.999 0.5,20.999 L18.5,20.999 C18.776,20.999 19,20.775 19,20.499 C19,20.223 18.776,19.999 18.5,19.999 L18.5,20 Z M2,5.5 C2,5.171 2.287,4.786 2.602,4.692 L11,2.172 L11,20 L2,20 L2,5.5 Z" id="Shape" fill="#FFFFFF"></path>
+                <polygon id="Shape" fill="#202C42" points="14 7 15 7 15 8 14 8"></polygon>
+                <polygon id="Shape" fill="#202C42" points="14 9 15 9 15 10 14 10"></polygon>
+                <polygon id="Shape" fill="#202C42" points="14 11 15 11 15 12 14 12"></polygon>
+                <polygon id="Shape" fill="#202C42" points="14 13 15 13 15 14 14 14"></polygon>
+                <polygon id="Shape" fill="#202C42" points="14 17 15 17 15 18 14 18"></polygon>
+                <polygon id="Shape" fill="#202C42" points="14 15 15 15 15 16 14 16"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>
