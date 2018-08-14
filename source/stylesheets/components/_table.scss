@@ -5,7 +5,11 @@ Table
   overflow: auto;
 }
 .scrollable-table{
+  overflow: auto;
 
+  @media screen and (min-width: 1024px) {
+    overflow: visible;
+  }
 
   table{
     width: 100%;
@@ -46,7 +50,7 @@ Blade Table
   thead{
     display: none;
 
-    @include media($tablet-landscape){
+    @media screen and (min-width: 1024px){
       display: table-header-group;
     }
 
@@ -61,7 +65,7 @@ Blade Table
         box-shadow: none;
       }
 
-      @include media($tablet-landscape){
+      @media screen and (min-width: 1024px){
         height: auto;
       }
 
@@ -74,6 +78,7 @@ Blade Table
         text-align: left;
         //white-space: nowrap;
         position: relative;
+        vertical-align: bottom;
 
         &:first-child{
           padding: 0px 20px;
@@ -85,12 +90,6 @@ Blade Table
 
         &:last-child{
           padding: 0px 0px 0px 30px;
-        }
-
-        span{
-          @include media($tablet-landscape){
-            //max-width: 100px;
-          }
         }
 
         .tooltip-trigger{
@@ -108,6 +107,7 @@ Blade Table
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
+    vertical-align: top;
 
     &:hover{
       box-shadow: 0 0 12px 0 rgba(196,187,187,0.50);
@@ -117,14 +117,15 @@ Blade Table
       }
     }
 
-    @include media($tablet){
-      @include span-columns(6 of 12);
-      @include omega(2n);
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      width: 48%;
+      margin: 0 1%;
       height: auto;
       margin-bottom: 20px;
     }
 
-    @include media($tablet-landscape) {
+    @media screen and (min-width: 1024px){
       border: none;
       display: table-row;
       width: 100%;
@@ -142,7 +143,7 @@ Blade Table
       display: block;
       font-size: 16px;
 
-      @include media($tablet-landscape){
+      @media screen and (min-width: 1024px){
         display: table-cell;
         padding: 10px 20px 10px 0px;
         border-top: 1px solid $blue-grey-med;
@@ -150,11 +151,10 @@ Blade Table
 
       &:first-child{
         padding: 20px 0px;
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           padding: 10px 10px 10px 20px;
           border-left: 1px solid $blue-grey-med;
           min-width: 330px;
-          //width: 100%;
         }
       }
 
@@ -162,7 +162,7 @@ Blade Table
         border-bottom: none;
         padding-bottom: 0px;
 
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           border-bottom: 1px solid $blue-grey-med;
           padding: 10px 20px;
         }
@@ -171,7 +171,7 @@ Blade Table
       &:nth-child(3){
         padding-top: 0px;
 
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           padding: 10px 20px;
         }
       }
@@ -179,7 +179,7 @@ Blade Table
       &:nth-child(4){
         border-bottom: none;
 
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           border-bottom: 1px solid $blue-grey-med;
         }
       }
@@ -188,7 +188,7 @@ Blade Table
         border-bottom: 0px;
         padding-bottom: 20px;
 
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           border-right: 1px solid $blue-grey-med;
           border-bottom: 1px solid $blue-grey-med;
           padding-bottom: 0px;
@@ -200,16 +200,16 @@ Blade Table
         display: block;
         font-weight: bold;
         width: 100%;
-        @include s-small;
+        font-size: $s-small;
 
-        @include media ($tablet-landscape){
+        @media screen and (min-width: 1024px){
           display: none;
         }
       }
 
       span{
 
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           font-weight: bold;
           display: table-cell;
           height: 62px;
@@ -220,7 +220,7 @@ Blade Table
       }
 
       small{
-        @include media($tablet-landscape){
+        @media screen and (min-width: 1024px){
           font-weight: normal;
         }
       }
@@ -228,7 +228,7 @@ Blade Table
 
     p, a{
       display: inline-block;
-      @include s-base;
+      font-size: $s-base;
       font-weight: bold;
     }
 
@@ -266,8 +266,82 @@ Blade Table
       background-color: #101d49;
     }
 
-    @include media($tablet-landscape){
+    @media screen and (min-width: 1024px){
       display: none;
+    }
+  }
+}
+
+.blade-table{
+
+  .with-toggle{
+    position: relative;
+
+    span{
+      display: inline-block;
+      padding-right: 60px;
+      width: 100%;
+    }
+  }
+
+  .panel-group{
+    margin: 0px;
+  }
+
+  .panel{
+    border: none;
+    box-shadow: none;
+
+    .panel-heading{
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      border: 1px solid $blue-grey-med;
+      border-radius: 4px;
+      padding: 0px;
+
+      @media screen and (min-width: 1024px){
+        top: 30px;
+        right: 20px;
+      }
+
+      h4{
+        margin-bottom: 0px;
+      }
+
+      a{
+        padding: 10px 15px;
+      }
+    }
+
+    .collapsed{
+      display: inline-block;
+    }
+
+    .panel-collapse{
+      ul{
+        border: none;
+        padding: 0px;
+
+        @media screen and (min-width: 1024px){
+          margin: 0px 0px 0px 30px;
+        }
+      }
+
+      li{
+        list-style: none;
+        border-top: 1px solid $blue-grey-med;
+
+        span{
+          border-left: none;
+          display: inline-block;
+          padding: 10px 0px 5px;
+
+          @media screen and (min-width: 1024px){
+            padding: 10px 0px;
+          }
+        }
+      }
     }
   }
 }
@@ -351,6 +425,8 @@ Table Filter
   .dropdown-menu{
     a{
       text-decoration: none;
+      display: inline-block;
+      width: 100%;
 
       &:hover{
         text-decoration: none;
@@ -359,8 +435,54 @@ Table Filter
   }
 }
 
+//Mobile Sort/Filter
+.mobile-sort-filter{
+  background-color: darken($blue-grey-light, 5%);
+  border-top: 1px solid $blue-grey-med;
+  padding: 10px 20px;
+
+  @media screen and (min-width: 1024px){
+    display: none;
+  }
+
+  p, select, .table-filter{
+    display: inline-block;
+    margin-bottom: 0px;
+  }
+
+  select{
+    background-color: transparent;
+    border: none;
+  }
+
+  .table-filter{
+    background-color: $blue-grey-light;
+    border: 1px solid $blue-grey-med;
+    float: right;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 2.3;
+
+    .dropdown-menu{
+      left: inherit;
+      right: 0px;
+
+      strong{
+        display: inline-block;
+        line-height: 1.2;
+        padding: 3px 20px;
+        width: 100%;
+        margin-bottom: -5px;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+
 .th-wrap{
-  @include media($tablet-landscape){
+  @media screen and (min-width: 1024px){
     max-width: 180px;
     display: inline-block;
   }

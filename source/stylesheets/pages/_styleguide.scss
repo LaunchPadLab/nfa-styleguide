@@ -2,19 +2,16 @@
 Main Wrapper
 -----------------------*/
 .main-wrapper{
-  background-color: #F1F2F4;
+  background-color: $blue-grey-light;
   min-height: 100vh;
 
-  @include media($tablet-landscape){
+  @media screen and (min-width: 1024px){
     margin-left: 260px;
   }
 
   &.styleguide-wrapper section{
+    border-top: 1px solid $white-med;
     padding: 50px;
-
-    &:nth-child(even){
-      background-color: #eaecf0;
-    }
 
     h4.styleguide-header{
       margin-bottom: 30px;
@@ -22,93 +19,30 @@ Main Wrapper
   }
 }
 
-.styleguide-wrapper{
-  .modal{
-    height: 500px;
-    position: relative;
+.index{
+  .navbar-fixed-top, #Div1{
+    display: none !important;
+  }
 
-    .modal-fade-screen {
-      @include position(absolute, 0 0 0 0);
-    }
+  &.styleguide-wrapper .basic-wrapper .styleguide-side-bar.side-bar{
+    position: fixed !important;
+  }
+
+  #Div1{
+    background-color: $white-base !important;
   }
 }
 
-.styleguide-wrapper{
-  .side-navigation{
-    position: relative;
-  }
-}
+aside.side-bar.styleguide-side-bar {
+  position: fixed;
 
-.styleguide-wrapper{
-  .data-blocks{
-    margin: 0px;
-    width: 100%;
-  }
-}
-
-.styleguide-wrapper{
-  .alert{
-    margin: 0px;
-    position: relative;
-    width: 100%;
-  }
-}
-
-.styleguide-wrapper{
-  .full-page-loading{
-    height: 400px;
-    width: 100%;
-  }
-}
-
-.styleguide-wrapper{
-  .fixed-footer{
-    margin: 0px;
-    position: relative;
-    width: 100%;
-  }
-}
-
-/*-----------------------
-Color Blocks
------------------------*/
-
-.color-block{
-  display: inline-block;
-  width: 100px;
-  background-color: $white-base;
-  border-radius: 3px;
-
-  .color{
-    border-radius: 3px 3px 0px 0px;
-    border-bottom: 1px solid $white-med;
-    height: 80px;
+  h5{
+    color: $white-base;
+    opacity: 0.3;
   }
 
-  .text-block{
-    padding: 10px;
-
-    h6, p{
-      margin: 0px;
-      text-align: center;
-    }
-
-    p{
-      @include s-tiny;
-    }
-  }
-}
-
-/*-----------------------
-Asset Block
------------------------*/
-.relevant-logo-block{
-  display: inline-block;
-
-  img{
-    display: inline-block;
-    margin-right: 15px;
-    width: 50px;
+  a{
+    text-decoration: none;
   }
 }
 

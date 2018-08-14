@@ -36,16 +36,9 @@
     <%= stylesheet_link_tag :application %>
   </head>
 
-  <body class="<%= page_classes %> interior-body">
-    <div class="row-offcanvas row-offcanvas-left">
-      <%= partial 'partials/main-navigation' %>
-      <div class="main-content">
-        <div class="basic-wrapper">
-          <%= partial 'partials/main-breadcrumb' %>
-          <%= yield %>
-        </div>
-      </div>
-      <%= partial 'partials/main-footer' %>
+  <body class="<%= page_classes %> styleguide-wrapper">
+    <div class="basic-wrapper">
+      <%= yield %>
     </div>
     <%= javascript_include_tag :all %>
   </body>

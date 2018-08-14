@@ -1,36 +1,34 @@
-.basic-wrapper{
-  .pagination{
-    max-width: 307px;
-    margin: 0px;
+.pagination{
+  max-width: 308px;
+  margin: 0px;
 
-    @media screen and (min-width: 768px) {
-      float: right;
+  @media screen and (min-width: 768px) {
+    float: right;
+  }
+
+  .btn{
+    background-color: $white-base;
+    border: 1px solid $blue-grey-med;
+    color: $black-base;
+    text-transform: none;
+    font-size: $s-base;
+    padding: 10px 16px;
+
+    &:hover{
+      background-color: lighten($blue-grey-med, 13%);
     }
 
-    .btn{
-      background-color: $white-base;
-      border: 1px solid $blue-grey-med;
-      color: $black-base;
-      text-transform: none;
-      @include s-base;
-      padding: 10px 16px;
-
-      &:hover{
-        background-color: lighten($blue-grey-med, 13%);
-      }
-
-      .icon{
-        height: 16px;
-        margin-bottom: 0px;
-        width: auto;
-      }
-
+    .icon{
+      height: 16px;
+      margin-bottom: 0px;
+      width: auto;
     }
 
-    .dropdown-menu{
-      a{
-        text-decoration: none;
-      }
+  }
+
+  .dropdown-menu{
+    a{
+      text-decoration: none;
     }
   }
 }

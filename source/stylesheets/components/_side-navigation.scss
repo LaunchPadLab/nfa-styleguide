@@ -7,7 +7,7 @@ Side Navigation
   padding: 25px 27px;
   z-index: 1;
 
-  @include media($tablet-landscape){
+  @media screen and (min-width: 1024px){
     margin-top: 0px;
     width: 260px;
     position: absolute;
@@ -15,7 +15,6 @@ Side Navigation
     bottom: 0px;
     left: 0px;
     height: 100%;
-    //overflow: auto;
   }
 
   .logo{
@@ -68,7 +67,7 @@ Side Navigation
     padding: 0px;
 
     li{
-      margin-top: 15px;
+      margin-top: 25px;
       list-style-type: none;
 
       p{
@@ -86,16 +85,17 @@ Side Navigation
     position: relative;
     width: 100%;
 
-    @include media($tablet-landscape){
+    @media screen and (min-width: 1024px){
       width: calc(100% + 40px);
     }
 
     &:after{
-      @include media($tablet-landscape){
+      @media screen and (min-width: 1024px){
         content: "";
         height: 0;
         width: 0;
-        @include triangle(13px, darken($green-base, 10%) $blue-grey-light, up-left);
+        border-top: 13px solid darken($green-base, 10%);
+        border-right: 13px solid $blue-grey-light;
         position: absolute;
         bottom: -13px;
         right: 0;
@@ -107,11 +107,18 @@ Side Navigation
     background-color: $green-base;
   }
 
+  .status-block{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 30px 10px 30px;
+    margin-top: 15px;
+  }
+
   .bar-block{
     background-color: $red-base;
 
     &:after{
-      @include triangle(13px, darken($red-base, 10%) $blue-grey-light, up-left);
+      border-top: 13px solid $red-dark;
+      border-left: 13px solid #F1F2F4;
     }
   }
 }

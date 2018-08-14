@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="20px" viewBox="0 0 13 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>md-phone-portrait</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
+        <g id="md-phone-portrait" fill="#FFFFFF" fill-rule="nonzero">
+            <path d="M11.1428056,0 L1.85714931,0 C0.83565625,0 0,0.818125 0,1.81821429 L0,18.1818304 C0,19.1818304 0.835611111,20 1.85714931,20 L11.1428056,20 C12.1643889,20 13,19.181875 13,18.1817857 L13,1.81821429 C13,0.818125 12.1643889,0 11.1428056,0 Z M11.375,16.4285714 L1.625,16.4285714 L1.625,3.57142857 L11.375,3.57142857 L11.375,16.4285714 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

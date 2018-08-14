@@ -1,30 +1,4 @@
-<div class="container">
-  <div id="Div1" class="bar">
-    <div id="PrintPageNew" class="page-tools">
-      <form class="quick-search">
-        <select>
-          <option>Firm</option>
-          <option>Individual</option>
-          <option>Pool</option>
-        </select>
-        <div class="search-bar">
-          <input type="search" name="" placeholder="Firm Name or NFA ID">
-        </div>
-      </form>
-      <a href="#" onclick="window.print(); return false;">
-        <svg class="svg-icon-print" focusable="false" aria-hidden="true"> <use xlink:href="#icon-print"></use> </svg>Print
-      </a>
-    </div>
-
-    <div id="Breadcrumbs" class="breadcrumbs">
-      <a href="../index.html">Home</a>
-      <span class="icon-bracket-right"></span>
-      <a href="Welcome.aspx">BASIC</a>
-    </div>
-  </div>
-</div>
-
-<div class="basic-wrapper">
+<div class="basic-content">
   <%= partial 'partials/side-bar-individual' %>
 
   <main class="content-with-sidebar">
@@ -173,57 +147,59 @@
           </div>
         </div>
         <div class="card-inner">
-          <table>
-            <thead>
-              <th>Decision Date<i class="sort-by descending"></i></th>
-              <th>Case #<i class="sort-by"></i></th>
-              <th>Firm Role
-                <div class="tooltip-block top">
-                  <span class="tooltip-trigger">?</span>
-                  <span class="tooltip-content">
-                    <p>Description goes here.</p>
-                  </span>
-                </div>
-                <i class="sort-by"></i>
-                <div class="table-filter">
-                   <div class="button-group">
-                      <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="../images/icons/filter.svg"></button>
-                      <ul class="dropdown-menu">
-                        <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; Respondent</a></li>
-                        <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; Claimant</a></li>
-                      </ul>
+          <div class="scrollable-table">
+            <table>
+              <thead>
+                <th>Decision Date<i class="sort-by descending"></i></th>
+                <th>Case #<i class="sort-by"></i></th>
+                <th>Firm Role
+                  <div class="tooltip-block top">
+                    <span class="tooltip-trigger">?</span>
+                    <span class="tooltip-content">
+                      <p>Description goes here.</p>
+                    </span>
                   </div>
-                </div>
-              </th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>11/18/2010</td>
-                <td><a href="#">10ARB00050</a></td>
-                <td>Respondent</td>
-              </tr>
-              <tr>
-                <td>07/13/2010</td>
-                <td><a href="#">09ARB00225</a></td>
-                <td>Respondent</td>
-              </tr>
-              <tr>
-                <td>12/30/2009</td>
-                <td><a href="#">09ARB00131</a></td>
-                <td>Respondent</td>
-              </tr>
-              <tr>
-                <td>10/15/2009</td>
-                <td><a href="#">08ARB00207</a></td>
-                <td>Claimant</td>
-              </tr>
-              <tr>
-                <td>09/22/2009</td>
-                <td><a href="#">08ARB00165</a></td>
-                <td>Respondent</td>
-              </tr>
-            </tbody>
-          </table>
+                  <i class="sort-by"></i>
+                  <div class="table-filter">
+                     <div class="button-group">
+                        <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="../images/icons/filter.svg"></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; Respondent</a></li>
+                          <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; Claimant</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>11/18/2010</td>
+                  <td><a href="#">10ARB00050</a></td>
+                  <td>Respondent</td>
+                </tr>
+                <tr>
+                  <td>07/13/2010</td>
+                  <td><a href="#">09ARB00225</a></td>
+                  <td>Respondent</td>
+                </tr>
+                <tr>
+                  <td>12/30/2009</td>
+                  <td><a href="#">09ARB00131</a></td>
+                  <td>Respondent</td>
+                </tr>
+                <tr>
+                  <td>10/15/2009</td>
+                  <td><a href="#">08ARB00207</a></td>
+                  <td>Claimant</td>
+                </tr>
+                <tr>
+                  <td>09/22/2009</td>
+                  <td><a href="#">08ARB00165</a></td>
+                  <td>Respondent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <%= partial 'partials/pagination' %>

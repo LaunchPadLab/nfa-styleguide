@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="6px" viewBox="0 0 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>up-scroll-arrow copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Profile" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Profile-V6a" transform="translate(-1319.000000, -562.000000)" fill="#4A4A4A" fill-rule="nonzero" stroke="#4A4A4A">
+            <g id="up-scroll-arrow-copy" transform="translate(1323.000000, 565.000000) rotate(-180.000000) translate(-1323.000000, -565.000000) translate(1319.000000, 563.000000)">
+                <path d="M6.9846734,3.91274292 C7.10266416,4.02908569 7.29373418,4.02908569 7.41163773,3.91274292 C7.52936687,3.79640016 7.52954128,3.60788661 7.41163773,3.49128299 L3.96313334,0.0872570758 C3.84522979,-0.0290856919 3.65433418,-0.0290856919 3.53651783,0.0872570758 L0.0883622687,3.49128299 C-0.0293668667,3.60788661 -0.0295412802,3.79622625 0.0883622687,3.91274292 C0.206265818,4.02908569 0.397335844,4.02908569 0.515239393,3.91274292 L3.74982559,0.808269206 L6.9846734,3.91274292 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

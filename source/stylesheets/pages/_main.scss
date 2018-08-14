@@ -7,18 +7,23 @@
     padding: 5px 20px 5px 10px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    @include position(absolute, 28px -10px null null);
+    position: absolute;
+    top: 28px;
+    right: -10px;
 
     &:after{
       content: "";
-      @include triangle(10px 9px, $red-dark #F1F2F4, up-left);
-      @include position(absolute, null 0px -9px null);
+      border-top: 65px solid $red-dark;
+      border-left: 65px solid #F1F2F4;
+      position: absolute;
+      right: 0px;
+      bottom: -9px;
     }
   }
 }
 
 
-.basic-wrapper{
+.basic-content{
   position: relative;
 
   h3{
@@ -65,6 +70,16 @@ Card
   background-color: $white-base;
   border: 1px solid $blue-grey-med;
   margin-bottom: 20px;
+  overflow: visible;
+  width: 100%;
+
+  &.shorter-blade{
+    padding: 0px;
+
+    .card-inner{
+      padding: 20px 30px;
+    }
+  }
 
   .card-header{
     background-color: $blue-grey-light;
@@ -73,7 +88,7 @@ Card
     display: inline-block;
     width: 100%;
 
-    @include media($tablet){
+    @media screen and (min-width: 768px) {
       padding: 20px 30px;
     }
 
@@ -94,7 +109,7 @@ Card
       display: block;
       margin-top: 10px;
 
-      @include media($tablet){
+      @media screen and (min-width: 768px) {
         float: right;
         margin-top: -7px;
       }
@@ -105,14 +120,39 @@ Card
       width: calc(100% - 80px);
       vertical-align: middle;
 
-      @include media($tablet){
+      @media screen and (min-width: 768px) {
         width: calc(100% - 250px);
+      }
+    }
+
+    a{
+      margin-top: 20px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 0px;
       }
     }
 
     &.with-header-only{
       i{
         vertical-align: middle;
+      }
+    }
+
+    &.with-dropdown{
+      i{
+        vertical-align: middle;
+      }
+
+      .text-block{
+        width: auto;
+      }
+
+      select{
+        margin-top: 6px;
+        @media screen and (min-width: 1024px) {
+          float: right;
+        }
       }
     }
   }
@@ -131,7 +171,7 @@ Card
     position: relative;
     width: 100%;
 
-    @include media($tablet){
+    @media screen and (min-width: 768px) {
       padding: 30px;
     }
 
@@ -139,8 +179,23 @@ Card
       color: $black-base;
     }
 
+    .card-inner-header{
+      .text-block{
+        @media screen and (min-width: 768px) {
+          display: inline-block;
+          width: calc(100% - 300px);
+        }
+      }
+
+      select{
+        @media screen and (min-width: 768px) {
+          float: right;
+        }
+      }
+    }
+
     .card-center-inner{
-      @include media($tablet-landscape){
+      @media screen and (min-width: 1024px){
         @include vertical-horizontal-center;
         width: calc(100% - 60px);
       }
@@ -167,7 +222,7 @@ Card
   border-top: 1px solid $blue-grey-med;
 
   .container{
-    padding: 50px 15px 30px;
+    padding: 30px 15px 30px;
   }
 }
 
@@ -179,7 +234,7 @@ Content with Sidebar
   border-top: 1px solid $blue-grey-med;
   padding: 40px 0px;
 
-  @include media($tablet-landscape){
+  @media screen and (min-width: 1024px){
     margin-top: -25px;
     margin-left: 260px;
     padding: 40px 20px;
@@ -250,13 +305,13 @@ Bar Banner
       width: 100%;
       margin-top: 5px;
 
-      @include media($tablet){
+      @media screen and (min-width: 768px) {
         margin-top: 20px;
         width: auto;
       }
 
       &:not(:last-child){
-        @include media($tablet){
+        @media screen and (min-width: 768px) {
           border-right: 1px solid $blue-grey-med;
           padding-right: 20px;
           margin-right: 20px;
@@ -327,14 +382,26 @@ Bar Banner
         margin-bottom: 0px;
       }
     }
+
+    &.with-button{
+      .text-block{
+        width: calc(100% - 218px);
+      }
+
+      .bth{
+        float: right;
+      }
+    }
   }
 }
 
 .reg-actions-card{
   text-align: center;
 
-  @include media($tablet-landscape){
-    @include span-columns(7 of 12);
+  @media screen and (min-width: 1024px){
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    float: left;
     height: 225px;
   }
 
@@ -345,8 +412,9 @@ Bar Banner
 
 .cases-card{
 
-  @include media($tablet-landscape){
-    @include span-columns(5 of 12);
+  @media screen and (min-width: 1024px){
+    width: 40.29137%;
+    float: left;
     height: 225px;
   }
 }
@@ -399,4 +467,68 @@ Bar Banner
 
     }
   }
+}
+
+
+.two-blades{
+  .card{
+    @media screen and (min-width: 1024px){
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%;
+    }
+
+    &:last-child{
+      @media screen and (min-width: 1024px){
+        margin: 0;
+      }
+    }
+  }
+}
+
+.note{
+  background-color: #CFD7DB;
+  margin-top: 20px;
+  padding: 30px;
+
+  p:last-child{
+    margin-bottom: 0px;
+  }
+}
+
+//FCM Charts
+.fcm-charts{
+  margin-top: 30px;
+  border-top: 1px solid $blue-grey-med;
+  padding-top: 30px;
+
+  td:not(:last-child){
+    border-right: 1px solid $blue-grey-med;
+  }
+
+  td:not(:first-child){
+    text-align: center;
+  }
+}
+
+select{
+  background-color: $white-base;
+  border: 1px solid $blue-grey-med;
+  height: 40px;
+  -webkit-appearance: none;
+        -moz-appearance: none;
+         -ms-appearance: none;
+          -o-appearance: none;
+             appearance: none;
+  background-image: url('../images/icons/dropdown.svg');
+  background-position: right 12px top 50%;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  cursor: pointer;
+  padding: 8px 32px 8px 12px;
+  text-overflow: ellipsis;
+}
+
+select::-ms-expand {
+    display: none;
 }
