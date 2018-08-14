@@ -1,178 +1,656 @@
 <!doctype html>
 <html>
+
   <head>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript">
+      WEB_SOCKET_SWF_LOCATION = "/__rack/WebSocketMain.swf";
+    </script>
+    <script type="text/javascript" src="/__rack/swfobject.js"></script>
+    <script type="text/javascript" src="/__rack/web_socket.js"></script>
+
+    <script type="text/javascript">
+      RACK_LIVERELOAD_PORT = 35729;
+    </script>
+    <script type="text/javascript" src="/__rack/livereload.js?host=192.168.1.53&amp;port=35729"></script>
+
+
     <title>Styleguide</title>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <!-- Use title if it's in the page YAML frontmatter -->
-    <link href="images/images/favicon.png" rel="icon" type="image/png" />
+    <link href="/images/images/favicon.png" rel="icon" type="image/png">
 
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/bootstrap.css" />
-    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/slick.css" type="text/css" />
-    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/slick-theme.css" type="text/css" />
+    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/bootstrap.css">
+    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/theme.css" type="text/css">
+    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/slick.css" type="text/css">
+    <link rel="stylesheet" href="https://www.nfa.futures.org/basicnet/cms/includes/css/slick-theme.css" type="text/css">
 
     <script type="text/javascript" src="https://www.nfa.futures.org/basicnet/cms/includes/js/jquery.min.js"></script>
     <script type="text/javascript" src="https://www.nfa.futures.org/basicnet/cms/includes/js/bootstrap.min.js"></script>
 
 
-    <link href="stylesheets/application-82ab0766.css" rel="stylesheet" />
+    <link href="/stylesheets/application-f7a7f176.css" rel="stylesheet">
+    <link href="stylesheets/application-53f6f6f1.css" rel="stylesheet" />
   </head>
 
-  <body class="index">
+  <body class="index styleguide-wrapper">
     <div class="basic-wrapper">
-      <aside class="side-bar">
+      <aside class="side-bar styleguide-side-bar">
   <ul>
-    <!--
-    <li><h5>Brand</h5></li>
-    <li><a href="#typography">Typography</a></li>
-    <li><a href="#colors">Colors</a></li>
-    <li><a href="#icons">Icons</a></li>
-
-    <li><h5>Form Elements</h5></li>
-    <li><a href="#search-input">Search Input</a></li>
-    <li><a href="#select">Select</a></li>
-    <li><a href="#table">Side Bar</a></li>
-    <li><a href="#tooltips">Tooltips</a></li>
-    <li><a href="#pagination">Pagination</a></li>
--->
     <li><h5>Components</h5></li>
     <li><a href="#table">Table</a></li>
     <li><a href="#card">Card</a></li>
+    <li><a href="#breadcrumb">Breadcrumb</a></li>
+    <li><a href="#pagination">Pagination</a></li>
+    <li><a href="#search">Search</a></li>
+    <li><a href="#table-blade">Table Blade</a></li>
 
     <li><h5>Layouts</h5></li>
+    <li><a href="/search.html">Search Landing</a></li>
     <li><a href="/firm-search-results.html">Firm Search Results</a></li>
     <li><a href="/individual-search-results.html">Individual Search Results</a></li>
     <li><a href="/pool-search-results.html">Pool Search Results</a></li>
-
+    <li><a href="/firm.html">Firm Profile</a></li>
+    <li><a href="/individual.html">Individual Profile</a></li>
   </ul>
 </aside>
 
 <main class="main-wrapper styleguide-wrapper">
 
-
   <section id="table">
     <h4 class="styleguide-header">Table</h4>
-    <table>
-  <thead>
-    <th>Pool Name<i class="sort-by descending"></i></th>
-    <th>Pool ID<i class="sort-by"></i></th>
-    <th>Exemption<i class="sort-by"></i></th>
-    <th>Status<i class="sort-by"></i></th>
-    <th>Withdrawn Date<i class="sort-by"></i></th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+    <div class="scrollable-table">
+  <table>
+    <thead>
+      <th>Effective Date
+        <div class="tooltip-block top">
+          <span class="tooltip-trigger">?</span>
+          <span class="tooltip-content">
+            <p>Description goes here.</p>
+          </span>
+        </div>
+        <i class="sort-by descending"></i>
+      </th>
+      <th>Contributor
+        <div class="tooltip-block top">
+          <span class="tooltip-trigger">?</span>
+          <span class="tooltip-content">
+            <p>Description goes here.</p>
+          </span>
+        </div>
+        <i class="sort-by"></i>
+        <div class="table-filter">
+           <div class="button-group">
+              <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icons/filter-bb76fcc0.svg"></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; CFTC</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; CBOE</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; CBOT</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; BTX</a></li>
+              </ul>
+          </div>
+        </div>
+      </th>
+      <th>Case Outcome</th>
+      <th>Case # <i class="sort-by"></i></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>12/21/2016</td>
+        <td>CFTC</td>
+        <td>
+          <ul>
+            <li>Cease & Desist Order</li>
+            <li>Fine/Civil Monetary Pentalty $120,000,000</li>
+          </ul>
+        </td>
+        <td><a href="#">17-03</a></td>
+      </tr>
+      <tr>
+        <td>12/21/2016</td>
+        <td>CBOE</td>
+        <td>
+          <ul>
+            <li>Fine Summary $2,500</li>
+          </ul>
+        </td>
+        <td><a href="#">ICT NO.105141</a></td>
+      </tr>
+      <tr>
+        <td>06/06/2014</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine Summary $5,000</li>
+          </ul>
+        </td>
+        <td><a href="#">RSRH-13-1735</a></td>
+      </tr>
+      <tr>
+        <td>12/07/2012</td>
+        <td>CFTC</td>
+        <td>
+          <ul>
+            <li>Fine $1,500,000</li>
+            <li>Commission Order</li>
+            <li>Other (See Narrative)</li>
+            <li>Cease & Desist Order</li>
+          </ul>
+        </td>
+        <td><a href="#">13-08</a></td>
+      </tr>
+      <tr>
+        <td>12/11/2007</td>
+        <td>CBOE</td>
+        <td>
+          <ul>
+            <li>Censure</li>
+            <li>Fine $10,000</li>
+          </ul>
+        </td>
+        <td><a href="#">CFE 07-0001</a></td>
+      </tr>
+      <tr>
+        <td>10/14/2003</td>
+        <td>BTX</td>
+        <td>
+          <ul>
+            <li>Fine $5,000</li>
+            <li>Undertaking</li>
+          </ul>
+        </td>
+        <td><a href="#">2003-MINV-15</a></td>
+      </tr>
+      <tr>
+        <td>07/13/2000</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $1,000</li>
+          </ul>
+        </td>
+        <td><a href="#">99-RFT-193</a></td>
+      </tr>
+      <tr>
+        <td>09/22/2009</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $750</li>
+          </ul>
+        </td>
+        <td><a href="#">99-RFT-193</a></td>
+      </tr>
+      <tr>
+        <td>07/31/1996</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $10,000</li>
+          </ul>
+        </td>
+        <td><a href="#">95-EX-24</a></td>
+      </tr>
+      <tr>
+        <td>02/11/1994</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $1,000</li>
+          </ul>
+        </td>
+        <td><a href="#">93-RRI-35</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
   </section>
 
   <section id="card">
     <h4 class="styleguide-header">Card</h4>
-    <h2>CFTC Exemptions & No Actions</h2>
+    <h1>Regulatory Actions</h1>
 <div class="card">
   <div class="card-header">
-    <img src="">
+    <i class="circle-icon warn"><img src="images/icons/ruling-8667874e.svg"></i>
     <div class="text-block">
-      <h3>Pool Exemptions</h3>
-      <p>For additional details about CFTC No Action letters, <a href="#" target="_blank">click here</a>.</p>
+      <p><small>This page includes information regarding the Case History of these matters concerning the person or firm you are researching. It may also include the Outcome if the cases have been resolved regarding this person or firm.</small></p>
+      <div class="action-summary">
+        <div class="item">
+          <span class="large-value">0</span>
+          <div class="text-block">
+            <p><strong><small>NFA Actions</small></strong></p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="large-value">6</span>
+          <div class="text-block">
+            <p><strong><small>CFTC Actions</small></strong></p>
+          </div>
+        </div>
+        <div class="item">
+          <span class="large-value">5</span>
+          <div class="text-block">
+            <p><strong><small>Exchange Actions</small></strong></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="" target="_blank" class="btn">Regulation PDF</a>
   </div>
   <div class="card-inner">
-    <table>
-  <thead>
-    <th>Pool Name<i class="sort-by descending"></i></th>
-    <th>Pool ID<i class="sort-by"></i></th>
-    <th>Exemption<i class="sort-by"></i></th>
-    <th>Status<i class="sort-by"></i></th>
-    <th>Withdrawn Date<i class="sort-by"></i></th>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>DO Offshore Drawbridge Holdings LLC</td>
-      <td>P083315</td>
-      <td>12-38 FOF No Action</td>
-      <td>Active</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+    <div class="scrollable-table">
+  <table>
+    <thead>
+      <th>Effective Date
+        <div class="tooltip-block top">
+          <span class="tooltip-trigger">?</span>
+          <span class="tooltip-content">
+            <p>Description goes here.</p>
+          </span>
+        </div>
+        <i class="sort-by descending"></i>
+      </th>
+      <th>Contributor
+        <div class="tooltip-block top">
+          <span class="tooltip-trigger">?</span>
+          <span class="tooltip-content">
+            <p>Description goes here.</p>
+          </span>
+        </div>
+        <i class="sort-by"></i>
+        <div class="table-filter">
+           <div class="button-group">
+              <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icons/filter-bb76fcc0.svg"></button>
+              <ul class="dropdown-menu">
+                <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; CFTC</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; CBOE</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; CBOT</a></li>
+                <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; BTX</a></li>
+              </ul>
+          </div>
+        </div>
+      </th>
+      <th>Case Outcome</th>
+      <th>Case # <i class="sort-by"></i></th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>12/21/2016</td>
+        <td>CFTC</td>
+        <td>
+          <ul>
+            <li>Cease & Desist Order</li>
+            <li>Fine/Civil Monetary Pentalty $120,000,000</li>
+          </ul>
+        </td>
+        <td><a href="#">17-03</a></td>
+      </tr>
+      <tr>
+        <td>12/21/2016</td>
+        <td>CBOE</td>
+        <td>
+          <ul>
+            <li>Fine Summary $2,500</li>
+          </ul>
+        </td>
+        <td><a href="#">ICT NO.105141</a></td>
+      </tr>
+      <tr>
+        <td>06/06/2014</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine Summary $5,000</li>
+          </ul>
+        </td>
+        <td><a href="#">RSRH-13-1735</a></td>
+      </tr>
+      <tr>
+        <td>12/07/2012</td>
+        <td>CFTC</td>
+        <td>
+          <ul>
+            <li>Fine $1,500,000</li>
+            <li>Commission Order</li>
+            <li>Other (See Narrative)</li>
+            <li>Cease & Desist Order</li>
+          </ul>
+        </td>
+        <td><a href="#">13-08</a></td>
+      </tr>
+      <tr>
+        <td>12/11/2007</td>
+        <td>CBOE</td>
+        <td>
+          <ul>
+            <li>Censure</li>
+            <li>Fine $10,000</li>
+          </ul>
+        </td>
+        <td><a href="#">CFE 07-0001</a></td>
+      </tr>
+      <tr>
+        <td>10/14/2003</td>
+        <td>BTX</td>
+        <td>
+          <ul>
+            <li>Fine $5,000</li>
+            <li>Undertaking</li>
+          </ul>
+        </td>
+        <td><a href="#">2003-MINV-15</a></td>
+      </tr>
+      <tr>
+        <td>07/13/2000</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $1,000</li>
+          </ul>
+        </td>
+        <td><a href="#">99-RFT-193</a></td>
+      </tr>
+      <tr>
+        <td>09/22/2009</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $750</li>
+          </ul>
+        </td>
+        <td><a href="#">99-RFT-193</a></td>
+      </tr>
+      <tr>
+        <td>07/31/1996</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $10,000</li>
+          </ul>
+        </td>
+        <td><a href="#">95-EX-24</a></td>
+      </tr>
+      <tr>
+        <td>02/11/1994</td>
+        <td>CBOT</td>
+        <td>
+          <ul>
+            <li>Fine $1,000</li>
+          </ul>
+        </td>
+        <td><a href="#">93-RRI-35</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
   </div>
 </div>
   </section>
+
+  <section id="breadcrumb">
+    <h4 class="styleguide-header">Breadcrumb</h4>
+    <div class="container">
+  <div id="Div1" class="bar">
+    <div id="PrintPageNew" class="page-tools">
+      <form class="quick-search">
+        <select>
+          <option>Firm</option>
+          <option>Individual</option>
+          <option>Pool</option>
+        </select>
+        <div class="search-bar">
+          <input type="search" name="" placeholder="Firm Name or NFA ID">
+        </div>
+      </form>
+      <a href="#" onclick="window.print(); return false;">
+        <svg class="svg-icon-print" focusable="false" aria-hidden="true"> <use xlink:href="#icon-print"></use> </svg>Print
+      </a>
+    </div>
+
+    <div id="Breadcrumbs" class="breadcrumbs">
+      <a href="../index.html">Home</a>
+      <span class="icon-bracket-right"></span>
+      <a href="Welcome.aspx">BASIC</a>
+    </div>
+  </div>
+</div>
+  </section>
+
+  <section id="pagination">
+    <h4 class="styleguide-header">Pagination</h4>
+    <div class="btn-group pagination" role="group" aria-label="...">
+  <button type="button" class="btn btn-default"><img src="images/icons/first-arrow-f9a20331.svg" alt="First Icon" class="icon"></button>
+  <button type="button" class="btn btn-default"><img src="images/icons/prev-arrow-67c71c2c.svg" alt="Previous Icon" class="icon"></button>
+
+  <div class="btn-group" role="group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Page 1 of 5
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li><a href="#">Page 4</a></li>
+      <li><a href="#">Page 5</a></li>
+    </ul>
+  </div>
+  <button type="button" class="btn btn-default"><img src="images/icons/next-arrow-7709a26c.svg" alt="Next Icon" class="icon"></button>
+  <button type="button" class="btn btn-default"><img src="images/icons/last-arrow-aeddaf35.svg" alt="Last Icon" class="icon"></button>
+</div>
+  </section>
+
+  <section id="search">
+    <h4 class="styleguide-header">Search</h4>
+    <div class="search-block primary">
+  <div class="search-block-inner">
+    <img src="images/company-logo/basic-logo-color-e2254905.svg" class="logo">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#home" aria-controls="firm" role="tab" data-toggle="tab">Firm</a></li>
+      <li role="presentation"><a href="#profile" aria-controls="individual" role="tab" data-toggle="tab">Individual</a></li>
+      <li role="presentation"><a href="#messages" aria-controls="pool" role="tab" data-toggle="tab">Pool</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="firm">
+        <div class="search-bar">
+          <input type="search" name="" placeholder="Firm Name or NFA ID">
+          <ul class="autocomplete">
+            <li>
+              <a href="">
+                <p><strong>Goldman</strong> Sachs & Co   &nbsp;|&nbsp;   NFA ID: 0002014</p>
+                <p>New York, NY</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p><strong>Goldman</strong> Sachs & Co   &nbsp;|&nbsp;  NFA ID: 0002014</p>
+                <p>New York, NY</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <p><strong>Goldman</strong> Sachs & Co  &nbsp;|&nbsp;   NFA ID: 0002014</p>
+                <p>New York, NY</p>
+              </a>
+            </li>
+            <li class="search-all">
+              <a href="">
+                <p>See all results for <strong>"Goldman"</strong></p>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn btn-primary">Search</button>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="individual">
+        <div class="search-bar is-active">
+          <input type="search" name="" placeholder="Individual Name or NFA ID">
+        </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="pool">
+        <div class="search-bar">
+          <input type="search" name="" placeholder="Pool Name or NFA ID">
+        </div>
+      </div>
+    </div>
+    <p><small>Conducting a BASIC search indicates you have accepted the <a href="" target="_blank">Terms and Conditions of Use</a> & <a href="" target="_blank">Privacy Statement</a>.</small></p>
+  </div>
+</div>
+
+<br>
+
+<div class="search-block primary">
+    <div class="search-block-inner">
+      <img src="images/company-logo/basic-logo-color-e2254905.svg" class="logo">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#home" aria-controls="firm" role="tab" data-toggle="tab">Firm</a></li>
+        <li role="presentation"><a href="#profile" aria-controls="individual" role="tab" data-toggle="tab">Individual</a></li>
+        <li role="presentation"><a href="#messages" aria-controls="pool" role="tab" data-toggle="tab">Pool</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="firm">
+          <div class="search-bar is-active">
+            <input type="search" name="" placeholder="Firm Name or NFA ID">
+            <ul class="autocomplete">
+              <li>
+                <a href="">
+                  <p><strong>Goldman</strong> Sachs & Co   &nbsp;|&nbsp;   NFA ID: 0002014</p>
+                  <p>New York, NY</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p><strong>Goldman</strong> Sachs & Co   &nbsp;|&nbsp;  NFA ID: 0002014</p>
+                  <p>New York, NY</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p><strong>Goldman</strong> Sachs & Co  &nbsp;|&nbsp;   NFA ID: 0002014</p>
+                  <p>New York, NY</p>
+                </a>
+              </li>
+              <li class="search-all">
+                <a href="">
+                  <p>See all results for <strong>"Goldman"</strong></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-primary">Search</button>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="individual">
+          <div class="search-bar is-active">
+            <input type="search" name="" placeholder="Individual Name or NFA ID">
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="pool">
+          <div class="search-bar">
+            <input type="search" name="" placeholder="Pool Name or NFA ID">
+          </div>
+        </div>
+      </div>
+      <p><small>Conducting a BASIC search indicates you have accepted the <a href="" target="_blank">Terms and Conditions of Use</a> & <a href="" target="_blank">Privacy Statement</a>.</small></p>
+    </div>
+  </div>
+  </section>
+
+  <section id="table-blade">
+    <h4 class="styleguide-header">Table Blade</h4>
+    <table class="blade-table">
+  <thead>
+    <th>Firm Name<i class="sort-by descending"></i></th>
+    <th><span class="th-wrap">Current NFA Membership Status
+      <div class="table-filter">
+         <div class="button-group">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icons/filter-bb76fcc0.svg"></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; NFA Member</a></li>
+              <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; Not an NFA Member</a></li>
+              <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp; Permanent Bar</a></li>
+            </ul>
+        </div>
+      </div></span>
+    </th>
+    <th><span class="th-wrap">Current Registration Types
+      <div class="tooltip-block top">
+        <span class="tooltip-trigger">?</span>
+        <span class="tooltip-content">
+          <p><u><b>CTA</b></u> = Commodity Trading Advisor</p>
+          <p><u><b>CPO</b></u> = Commodity Pool Operator</p>
+          <p><u><b>EXM</b></u> = Exempt Non-U.S. Firm</p>
+          <p><u><b>FCM</b></u> = Futures Commission Merchant</p>
+          <p><u><b>IB</b></u> = Introducing Broker</p>
+          <p><u><b>RFED</b></u> = Retail Foreign Exchange Dealer</p>
+          <p><u><b>SD</b></u> = Swap Dealer</p>
+        </span>
+      </div>
+      <div class="table-filter">
+         <div class="button-group">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icons/filter-bb76fcc0.svg"></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; CTA</a></li>
+              <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; CPO</a></li>
+              <li><a href="#" class="small" data-value="option3" tabIndex="-1"><input type="checkbox"/>&nbsp; EXM</a></li>
+              <li><a href="#" class="small" data-value="option4" tabIndex="-1"><input type="checkbox"/>&nbsp; FCM</a></li>
+              <li><a href="#" class="small" data-value="option5" tabIndex="-1"><input type="checkbox"/>&nbsp; IB</a></li>
+              <li><a href="#" class="small" data-value="option6" tabIndex="-1"><input type="checkbox"/>&nbsp; RFED</a></li>
+              <li><a href="#" class="small" data-value="option7" tabIndex="-1"><input type="checkbox"/>&nbsp; SD</a></li>
+
+            </ul>
+        </div>
+      </div></span>
+    </th>
+    <th>Regulatory Actions
+      <div class="tooltip-block top">
+        <span class="tooltip-trigger">?</span>
+        <span class="tooltip-content">
+          <p>A disciplinary or remedial action taken by a regulatory body, such as the exchanges, NFA and the CFTC in enforcing its rules and the requirements of the Commodity Exchange Act.</p>
+        </span>
+      </div>
+      <div class="table-filter">
+         <div class="button-group">
+            <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"><img src="images/icons/filter-bb76fcc0.svg"></button>
+            <ul class="dropdown-menu">
+              <li><a href="#" class="small" data-value="option1" tabIndex="-1"><input type="checkbox"/>&nbsp; Yes</a></li>
+              <li><a href="#" class="small" data-value="option2" tabIndex="-1"><input type="checkbox"/>&nbsp; No</a></li>
+            </ul>
+        </div>
+      </div>
+    </th>
+  </thead>
+  <tbody>
+    <tr>
+      <td><h4>Goldman Descendants 2014 Trust <div class="tooltip-block top"><span class="tooltip-trigger">?</span><span class="tooltip-content">
+            <h5>Is a related entity to:</h5>
+            <h4>Bear Stearns & Co Inc</h4>
+            <p><small>NFA ID: 0000815   |   New York, NY</small></p>
+          </span>
+        </div>
+      </h4><small>NFA ID: 0509183   |   New York, NY</small></td>
+      <td><span>Not an NFA Member</span></td>
+      <td><span>CPO, CTA, FCM, IB, SD, RFED</span></td>
+      <td data-th="Regulatory Actions"><span>Yes</span></td>
+      <td><div class="btn">View Details</div></td>
+    </tr>
+  </tbody>
+</table>
+  </section>
+
 
   <!-- Components -->
 
 
 </main>
     </div>
-
     <script src="javascripts/all-c0a304b8.js"></script>
   </body>
 </html>

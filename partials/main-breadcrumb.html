@@ -36,7 +36,7 @@
     <link href="../stylesheets/application-53f6f6f1.css" rel="stylesheet" />
   </head>
 
-  <body class="partials partials_page-header interior-body">
+  <body class="partials partials_main-breadcrumb interior-body">
     <div class="row-offcanvas row-offcanvas-left">
       <div class="navbar-fixed-top">
     <header class="main-header" role="banner">
@@ -324,7 +324,31 @@
     </div>
   </div>
 </div>
-          
+          <div class="container">
+  <div id="Div1" class="bar">
+    <div id="PrintPageNew" class="page-tools">
+      <form class="quick-search">
+        <select>
+          <option>Firm</option>
+          <option>Individual</option>
+          <option>Pool</option>
+        </select>
+        <div class="search-bar">
+          <input type="search" name="" placeholder="Firm Name or NFA ID">
+        </div>
+      </form>
+      <a href="#" onclick="window.print(); return false;">
+        <svg class="svg-icon-print" focusable="false" aria-hidden="true"> <use xlink:href="#icon-print"></use> </svg>Print
+      </a>
+    </div>
+
+    <div id="Breadcrumbs" class="breadcrumbs">
+      <a href="../index.html">Home</a>
+      <span class="icon-bracket-right"></span>
+      <a href="Welcome.aspx">BASIC</a>
+    </div>
+  </div>
+</div>
         </div>
       </div>
       <footer class="main-footer" role="contentinfo">
