@@ -488,8 +488,10 @@ Bar Banner
 
 .note{
   background-color: #CFD7DB;
+  display: inline-block;
   margin-top: 20px;
   padding: 30px;
+  width: 100%;
 
   p:last-child{
     margin-bottom: 0px;
