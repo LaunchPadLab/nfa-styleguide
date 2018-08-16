@@ -57,9 +57,11 @@
     margin-bottom: 0px; }
     .basic-wrapper .results-header p strong {
       text-transform: uppercase; }
-  @media screen and (min-width: 768px) {
-    .basic-wrapper .results-header .pagination {
-      margin-top: 40px; } }
+  .basic-wrapper .results-header .pagination {
+    margin-top: 10px; }
+    @media screen and (min-width: 768px) {
+      .basic-wrapper .results-header .pagination {
+        margin-top: 40px; } }
   .basic-wrapper #Div1 .quick-search {
     float: left;
     margin-top: -10px;
