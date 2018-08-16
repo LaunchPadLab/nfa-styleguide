@@ -1070,8 +1070,10 @@
       margin: 0; } }
   .basic-wrapper .note {
     background-color: #CFD7DB;
+    display: inline-block;
     margin-top: 20px;
-    padding: 30px; }
+    padding: 30px;
+    width: 100%; }
     .basic-wrapper .note p:last-child {
       margin-bottom: 0px; }
   .basic-wrapper .fcm-charts {
