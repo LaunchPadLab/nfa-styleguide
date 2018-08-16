@@ -1114,6 +1114,8 @@
     position: fixed !important; }
   .basic-wrapper .index #Div1 {
     background-color: #FFFFFF !important; }
+  .basic-wrapper .styleguide-wrapper {
+    background-color: #f8fdff; }
   .basic-wrapper aside.side-bar.styleguide-side-bar {
     position: fixed; }
     .basic-wrapper aside.side-bar.styleguide-side-bar h5 {
