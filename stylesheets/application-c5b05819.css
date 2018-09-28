@@ -541,16 +541,18 @@
     background-color: #101d49;
     margin-top: -25px;
     padding: 25px 27px;
-    z-index: 1; }
-    @media screen and (min-width: 1024px) {
+    z-index: 1;
+    margin: -39px -20px 20px; }
+    @media screen and (min-width: 992px) {
       .basic-wrapper .side-bar {
         margin-top: 0px;
+        margin-left: -5px;
         width: 260px;
         position: absolute;
-        top: 0px;
+        top: -41px;
         bottom: 0px;
-        left: 0px;
-        height: 100%; } }
+        left: 20px;
+        height: calc(100% + 57px); } }
     .basic-wrapper .side-bar .logo {
       width: 75px;
       margin-bottom: 10px; }
@@ -798,9 +800,15 @@
   .basic-wrapper .basic-content {
     position: relative; }
     .basic-wrapper .basic-content h3 {
-      font-size: 18.5px; }
+      font-size: 16.5px; }
     .basic-wrapper .basic-content .red {
       color: #DA4848; }
+    @media screen and (min-width: 992px) {
+      .basic-wrapper .basic-content .main-text.col-md-offset-3 {
+        margin-left: calc(260px + 30px); } }
+    @media screen and (min-width: 992px) {
+      .basic-wrapper .basic-content .main-text.col-md-9 {
+        width: calc(100% - 290px); } }
   .basic-wrapper .card .btn-primary {
     background-color: #52798f;
     padding: 10px;
@@ -926,19 +934,19 @@
   .basic-wrapper .content-with-sidebar {
     background-color: #f2f6f8;
     border-top: 1px solid #CFD7DB;
-    padding: 40px 0px; }
+    padding: 40px 0px;
+    margin-top: -25px; }
     @media screen and (min-width: 1024px) {
       .basic-wrapper .content-with-sidebar {
-        margin-top: -25px;
-        margin-left: 260px;
-        padding: 40px 20px;
-        width: calc(100% - 260px); } }
+        padding: 40px 0px; } }
     .basic-wrapper .content-with-sidebar h1 {
       color: #4A4A4A; }
     .basic-wrapper .content-with-sidebar .red-alert {
       color: #DA4848; }
     .basic-wrapper .content-with-sidebar .container {
-      max-width: 990px; }
+      max-width: 75em; }
+    .basic-wrapper .content-with-sidebar .main-text {
+      padding: 0px; }
   .basic-wrapper .bar-banner {
     background-color: #DA4848;
     padding: 30px;
@@ -982,7 +990,7 @@
     width: auto;
     vertical-align: middle; }
   .basic-wrapper .large-value {
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
     vertical-align: middle;
     margin-right: 10px;
@@ -1004,8 +1012,8 @@
     display: inline-block;
     line-height: 2.05;
     border-right: 1px solid #CFD7DB;
-    padding-right: 20px;
-    margin-right: 20px; }
+    padding-right: 15px;
+    margin-right: 15px; }
   .basic-wrapper .item.is-vertical .text-block {
     display: inline-block;
     width: calc(100% - 64px);
