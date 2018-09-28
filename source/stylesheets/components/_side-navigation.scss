@@ -6,15 +6,17 @@ Side Navigation
   margin-top: -25px;
   padding: 25px 27px;
   z-index: 1;
+  margin: -39px -20px 20px;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 992px){
     margin-top: 0px;
+    margin-left: -5px;
     width: 260px;
     position: absolute;
-    top: 0px;
+    top: -41px;
     bottom: 0px;
-    left: 0px;
-    height: 100%;
+    left: 20px;
+    height: calc(100% + 57px);
   }
 
   .logo{

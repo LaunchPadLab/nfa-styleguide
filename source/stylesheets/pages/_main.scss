@@ -27,11 +27,25 @@
   position: relative;
 
   h3{
-    font-size: 18.5px;
+    font-size: 16.5px;
   }
 
   .red{
     color: $red-base;
+  }
+
+  .main-text{
+    &.col-md-offset-3 {
+      @media screen and (min-width: 992px){
+        margin-left: calc(260px + 30px);
+      }
+    }
+
+    &.col-md-9 {
+      @media screen and (min-width: 992px){
+        width: calc(100% - 290px);
+      }
+    }
   }
 }
 
@@ -233,12 +247,12 @@ Content with Sidebar
   background-color: $blue-grey-light;
   border-top: 1px solid $blue-grey-med;
   padding: 40px 0px;
+  margin-top: -25px;
 
   @media screen and (min-width: 1024px){
-    margin-top: -25px;
-    margin-left: 260px;
-    padding: 40px 20px;
-    width: calc(100% - 260px);
+    //margin-left: 260px;
+    padding: 40px 0px;
+    //width: calc(100% - 260px);
   }
 
   h1{
@@ -250,7 +264,13 @@ Content with Sidebar
   }
 
   .container{
-    max-width: 990px;
+    //max-width: 990px;
+    max-width: 75em;
+  }
+
+  .main-text{
+    //padding: 20px;
+    padding: 0px;
   }
 }
 
@@ -327,7 +347,7 @@ Bar Banner
 }
 
 .large-value{
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   vertical-align: middle;
   margin-right: 10px;
@@ -369,8 +389,8 @@ Bar Banner
       display: inline-block;
       line-height: 2.05;
       border-right: 1px solid $blue-grey-med;
-      padding-right: 20px;
-      margin-right: 20px;
+      padding-right: 15px;
+      margin-right: 15px;
     }
 
     .text-block{
