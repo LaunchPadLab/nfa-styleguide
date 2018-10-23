@@ -554,3 +554,155 @@ select{
 select::-ms-expand {
     display: none;
 }
+
+/*-----------------------
+Timeline
+-----------------------*/
+ul.timeline{
+  //border-top: 1px solid $blue-grey-med;
+  padding: 0px;
+  position: relative;
+
+  li{
+    text-align: center;
+    width: calc(100%/5.45);
+    display: inline-block;
+    smargin-left: -4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px;
+    position: relative;
+    text-align: left;
+    font-size: 10px;
+
+    @media screen and (min-width: 768px){
+      width: calc(100%/5.3);
+      font-size: 14px;
+
+    }
+
+    span{
+      margin-left: -10px;
+
+      @media screen and (min-width: 768px){
+        margin-left: -18px;
+      }
+    }
+
+
+    &:before{
+      border-left: 1px solid $blue-grey-med;
+      height: 20px;
+      content: "";
+      @include vertical-horizontal-center;
+      top: -20px;
+      left: 0px;
+    }
+
+    &:after{
+      border-top: 1px solid $blue-grey-med;
+      content:"";
+      display: inline-block;
+      width: calc(100% + 10px);
+      position: absolute;
+      top: -20px;
+      left: 4px;
+    }
+
+    &:first-child{
+      text-align: left;
+
+      span{
+        margin-left: 0px;
+      }
+
+
+      &:before{
+        left: 4px;
+      }
+    }
+
+    &:last-child{
+      position: absolute;
+      //right: -6px;
+      width: 40px;
+      margin-left: -18px;
+
+      span{
+        margin-left: 0px;
+      }
+
+      @media screen and (min-width: 1024px){
+        right:4px;
+      }
+
+      &:after{
+        display: none;
+      }
+
+      &:before{
+        left: unset;
+        right: 8px;
+      }
+    }
+  }
+}
+
+ul.timeline-events{
+  list-style: none;
+  padding: 0px;
+  margin-bottom: 0px;
+
+  li{
+    margin-top: 10px;
+
+    &:before{
+      content: attr(title);
+      color: $black-base;
+      font-size: 13px;
+      //margin-left: 10px;
+      font-weight: bold;
+      vertical-align: 1px;
+      display: block;
+
+      @media screen and (min-width: 1024px){
+        display: none;
+      }
+    }
+
+    &.green{
+      .event{
+        background-color: $green-base;
+      }
+    }
+
+    &.blue{
+      .event{
+        background-color: $blue-grey-base;
+      }
+    }
+
+  }
+
+  .event{
+    min-height: 20px;
+    background-color: $blue-grey-base;
+    display: inline-block;
+    border-radius: 20em;
+    vertical-align: top;
+
+    .tooltip-trigger{
+      font-size: 13px;
+      color: $white-base;
+      width: auto;
+      border: none;
+      font-weight: bold;
+      display: none;
+      margin: 0px 10px;
+
+      @media screen and (min-width: 1024px){
+        display: inline-block;
+      }
+    }
+  }
+}
