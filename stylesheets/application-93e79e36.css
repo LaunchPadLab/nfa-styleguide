@@ -37,6 +37,9 @@
   Bar Banner
   -----------------------*/
   /*-----------------------
+  Timeline
+  -----------------------*/
+  /*-----------------------
   Main Wrapper
   -----------------------*/
   /*-----------------------
@@ -1110,6 +1113,113 @@
     text-overflow: ellipsis; }
   .basic-wrapper select::-ms-expand {
     display: none; }
+  .basic-wrapper ul.timeline {
+    padding: 0px;
+    position: relative; }
+    .basic-wrapper ul.timeline li {
+      text-align: center;
+      width: calc(100%/5.45);
+      display: inline-block;
+      smargin-left: -4px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-top: 20px;
+      position: relative;
+      text-align: left;
+      font-size: 10px; }
+      @media screen and (min-width: 768px) {
+        .basic-wrapper ul.timeline li {
+          width: calc(100%/5.3);
+          font-size: 14px; } }
+      .basic-wrapper ul.timeline li span {
+        margin-left: -10px; }
+        @media screen and (min-width: 768px) {
+          .basic-wrapper ul.timeline li span {
+            margin-left: -18px; } }
+      .basic-wrapper ul.timeline li:before {
+        border-left: 1px solid #CFD7DB;
+        height: 20px;
+        content: "";
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        transform: translateY(-50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        -moz-transform: translateY(-50%) translateX(-50%);
+        -ms-transform: translateY(-50%) translateX(-50%);
+        -o-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
+        top: -20px;
+        left: 0px; }
+      .basic-wrapper ul.timeline li:after {
+        border-top: 1px solid #CFD7DB;
+        content: "";
+        display: inline-block;
+        width: calc(100% + 10px);
+        position: absolute;
+        top: -20px;
+        left: 4px; }
+      .basic-wrapper ul.timeline li:first-child {
+        text-align: left; }
+        .basic-wrapper ul.timeline li:first-child span {
+          margin-left: 0px; }
+        .basic-wrapper ul.timeline li:first-child:before {
+          left: 4px; }
+      .basic-wrapper ul.timeline li:last-child {
+        position: absolute;
+        width: 40px;
+        margin-left: -18px; }
+        .basic-wrapper ul.timeline li:last-child span {
+          margin-left: 0px; }
+        @media screen and (min-width: 1024px) {
+          .basic-wrapper ul.timeline li:last-child {
+            right: 4px; } }
+        .basic-wrapper ul.timeline li:last-child:after {
+          display: none; }
+        .basic-wrapper ul.timeline li:last-child:before {
+          left: unset;
+          right: 8px; }
+  .basic-wrapper ul.timeline-events {
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 0px; }
+    .basic-wrapper ul.timeline-events li {
+      margin-top: 10px; }
+      .basic-wrapper ul.timeline-events li:before {
+        content: attr(title);
+        color: #49494a;
+        font-size: 13px;
+        font-weight: bold;
+        vertical-align: 1px;
+        display: block; }
+        @media screen and (min-width: 1024px) {
+          .basic-wrapper ul.timeline-events li:before {
+            display: none; } }
+      .basic-wrapper ul.timeline-events li.green .event {
+        background-color: #4b7d76; }
+      .basic-wrapper ul.timeline-events li.blue .event {
+        background-color: #52798f; }
+    .basic-wrapper ul.timeline-events .event {
+      min-height: 20px;
+      background-color: #52798f;
+      display: inline-block;
+      border-radius: 20em;
+      vertical-align: top; }
+      .basic-wrapper ul.timeline-events .event .tooltip-trigger {
+        font-size: 13px;
+        color: #FFFFFF;
+        width: auto;
+        border: none;
+        font-weight: bold;
+        display: none;
+        margin: 0px 10px; }
+        @media screen and (min-width: 1024px) {
+          .basic-wrapper ul.timeline-events .event .tooltip-trigger {
+            display: inline-block; } }
   .basic-wrapper .main-wrapper {
     background-color: #f2f6f8;
     min-height: 100vh; }
