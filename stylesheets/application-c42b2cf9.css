@@ -104,6 +104,11 @@
       width: 100%; }
       .basic-wrapper .scrollable-table table th {
         white-space: nowrap; }
+        @media screen and (min-width: 1024px) {
+          .basic-wrapper .scrollable-table table th {
+            max-width: 130px;
+            vertical-align: bottom;
+            white-space: normal; } }
   .basic-wrapper table {
     width: 100%; }
   .basic-wrapper th, .basic-wrapper td {
@@ -271,6 +276,8 @@
       @media screen and (min-width: 1024px) {
         .basic-wrapper .blade-table .btn {
           display: none; } }
+  .basic-wrapper tr.highlight td {
+    font-weight: bold; }
   .basic-wrapper .blade-table .with-toggle {
     position: relative; }
     .basic-wrapper .blade-table .with-toggle span {
@@ -1019,6 +1026,7 @@
     margin-right: 15px; }
   .basic-wrapper .item.is-vertical .text-block {
     display: inline-block;
+    padding: 6px 0px;
     width: calc(100% - 64px);
     vertical-align: middle; }
     .basic-wrapper .item.is-vertical .text-block h3, .basic-wrapper .item.is-vertical .text-block p, .basic-wrapper .item.is-vertical .text-block a {
