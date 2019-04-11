@@ -16,6 +16,12 @@ Table
 
     th{
       white-space: nowrap;
+
+      @media screen and (min-width: 1024px) {
+        max-width: 130px;
+        vertical-align: bottom;
+        white-space: normal;
+      }
     }
   }
 }
@@ -269,6 +275,12 @@ Blade Table
     @media screen and (min-width: 1024px){
       display: none;
     }
+  }
+}
+
+tr.highlight{
+  td{
+    font-weight: bold;
   }
 }
 
