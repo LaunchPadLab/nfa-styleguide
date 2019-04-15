@@ -1,0 +1,117 @@
+@media print {
+
+	.main-header{
+		border: none;
+		background: none;
+		background-color: red !important;
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+
+	.bar, .nav-section{
+		display: none !important;
+	}
+
+	.navbar{
+		height: 500px;
+	}
+
+	.container{
+		border: none;
+	}
+
+	.pagination, .mobile-sort-filter, .panel-heading{
+		display: none;
+	}
+
+	body {-webkit-print-color-adjust: exact;}
+
+	.sort-by, .table-filter, .tooltip-block{
+		display: none;
+	}
+
+	.interior .container{
+		padding-top: 0px;
+	}
+
+	.blade-table tr td:first-child{
+		padding: 5px;
+	}
+
+	.blade-table tr, .blade-table thead tr{
+		height: auto;
+
+		th, td{
+			font-size: 10px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			border: none !important;
+
+			h4{
+				font-size: 12px;
+			}
+
+			span{
+				font-size: 10px;
+				height: auto;
+			}
+		}
+	}
+
+	.blade-table tbody tr{
+		background-color: $blue-grey-light !important;
+		-webkit-print-color-adjust: exact; 
+	}
+
+	h1, h2{
+		font-size: 15px;
+	}
+
+	h3{
+		font-size: 13px;
+	}
+
+	th, td, p, p strong, li{
+		font-size: 12px;
+	}
+
+	.bar-banner{
+		&:after{
+		  border-top: 65px solid $white-base !important;
+		}
+	}
+
+	.side-bar{
+		margin: 20px 0px 20px;
+		border: none;
+		position: relative;
+
+		li{
+			display: inline-block;
+			margin-right: 2%;
+			width: 30%;
+			vertical-align: top;
+		}
+
+		.member-block{
+			position: absolute;
+			top: 40px;
+			right: -12px;
+			width: 300px;
+		}
+	}
+
+	.reg-actions-card, .cases-card{
+		height: 200px;
+	}
+	.content-with-sidebar{
+		border: none;
+	}
+}
+
+@media print and (color) {
+   * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+   }
+}

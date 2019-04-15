@@ -13,7 +13,7 @@ Landing
   &:after{
     @media screen and (min-width: 1024px){
       content: "";
-      background-color: $blue-grey-base;
+      background-color: $blue-grey-base !important;
       width: 42%;
       position: absolute;
       top: 0px;
@@ -21,6 +21,7 @@ Landing
       display: inline-block;
       z-index: 0;
       height: 100%;
+      -webkit-print-color-adjust: exact;
     }
   }
 
@@ -44,22 +45,25 @@ Landing
     }
 
     .text-block{
-      background-color: #52798F;
+      background-color: #52798F !important;
       position: relative;
       z-index: 1;
       padding: 40px 20px;
       margin: 0px -20px;
+      -webkit-print-color-adjust: exact; 
 
       @media screen and (min-width: 1024px){
+        background-color: transparent !important;
         width: 40%;
         float: right;
         margin: 0px;
         padding: 0px;
         float: right;
+        -webkit-print-color-adjust: exact;
       }
 
       p{
-        color: $white-base;
+        color: $white-base !important;
         font-size: 16px;
         max-width: 550px;
         margin: 0 auto;
@@ -91,45 +95,49 @@ Landing
 
   .nav-tabs{
     a{
-      background-color: #DBDBDB;
+      background-color: #DBDBDB !important;
       color: #202C42;
       text-decoration: none;
       font-weight: bold;
       border-radius: 0px;
       text-align: center;
       border: none;
+      -webkit-print-color-adjust: exact;
 
       @media screen and (min-width: 768px) {
-        //width: 33%;
         width: 150px;
       }
     }
 
     .active a{
-      color: $white-base;
-      background-color: #202C42;
+      background-color: #202C42 !important;
       border: none;
+      color: $white-base !important;
+      -webkit-print-color-adjust: exact;
     }
   }
 
   .tab-pane{
-    background-color: #202C42;
+    background-color: #202C42 !important;
     padding: 20px;
     margin-bottom: 10px;
     width: 100%;
+    -webkit-print-color-adjust: exact;
 
     .search-bar{
       width: 100%;
       display: inline-block;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px), print {
         width: calc(100% - 190px);
       }
 
       input{
+        background-color: $white-base !important;
         padding: 8px 8px 8px 40px;
         min-width: 0px;
         width: 100%;
+        -webkit-print-color-adjust: exact;
       }
 
       &:after{
@@ -140,12 +148,14 @@ Landing
     }
 
     .btn{
-      background-color: $blue-grey-base;
+      background-color: $blue-grey-base !important;
+      color: $white-base !important;
       padding: 11px 10px;
       width: 100%;
       margin-top: 10px;
+      -webkit-print-color-adjust: exact;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px), print {
         margin-top: 0px;
         width: 180px;
       }

@@ -2,11 +2,13 @@
 Side Navigation
 -----------------------*/
 .side-bar{
-  background-color: $blue-base;
+  background-color: $blue-base !important;
   margin-top: -25px;
   padding: 25px 27px;
   z-index: 1;
   margin: -39px -20px 20px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   @media screen and (min-width: 992px){
     margin-top: 0px;
@@ -25,18 +27,22 @@ Side Navigation
   }
 
   h3, h6{
-    color: $white-base;
+    color: $white-base !important;
     margin-bottom: 10px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   h3{
     text-transform: uppercase;
   }
 
-  p, a{
-    color: $white-base;
+  p, a, p strong{
+    color: $white-base !important;
     font-size: 14px;
     margin-bottom: 0px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   a{
@@ -87,12 +93,12 @@ Side Navigation
     position: relative;
     width: 100%;
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px), print{
       width: calc(100% + 40px);
     }
 
     &:after{
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px), print{
         content: "";
         height: 0;
         width: 0;
@@ -106,13 +112,17 @@ Side Navigation
   }
 
   .member-block{
-    background-color: $green-base;
+    background-color: $green-base !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .status-block{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1) !important;
     padding: 10px 30px 10px 30px;
     margin-top: 15px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .bar-block{

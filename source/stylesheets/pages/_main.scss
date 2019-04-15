@@ -2,14 +2,15 @@
   position: relative;
 
   .error-message{
-    background-color: $red-base;
-    color: $white-base;
+    background-color: $red-base !important;
+    color: $white-base !important;
     padding: 5px 20px 5px 10px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     position: absolute;
     top: 28px;
     right: -10px;
+    -webkit-print-color-adjust: exact;
 
     &:after{
       content: "";
@@ -30,8 +31,10 @@
     font-size: 16.5px;
   }
 
-  .red{
-    color: $red-base;
+  .red, .red small{
+    color: $red-base !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .main-text{
@@ -53,9 +56,12 @@
 Button Primary
 -----------------------*/
 .card .btn-primary{
-  background-color: $blue-grey-base;
+  background-color: $blue-grey-base !important;
+  color: $white-base !important;
   padding: 10px;
   min-width: 150px;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   &:hover{
     background-color: $blue-grey-dark;
@@ -69,7 +75,10 @@ Button Primary
 }
 
 .card .btn-alert{
-  background-color: $red-base;
+  background-color: $red-base !important;
+  color: $white-base !important;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   &:hover{
     background-color: $red-dark;
@@ -96,11 +105,12 @@ Card
   }
 
   .card-header{
-    background-color: $blue-grey-light;
-    border-bottom: 1px solid $blue-grey-med;
+    background-color: $blue-grey-light !important;
+    border-bottom: 1px solid $blue-grey-med !important;
     padding: 20px;
     display: inline-block;
     width: 100%;
+    -webkit-print-color-adjust: exact; 
 
     @media screen and (min-width: 768px) {
       padding: 20px 30px;
@@ -218,13 +228,14 @@ Card
 }
 
 .circle-icon{
-  background-color: $blue-grey-base;
+  background-color: $blue-grey-base !important;
   border-radius: 20em;
   display: inline-block;
   height: 50px;
   margin-right: 20px;
   width: 50px;
   vertical-align: top;
+  -webkit-print-color-adjust: exact;
 
   &.warn{
     background-color: $red-base;
@@ -278,10 +289,12 @@ Content with Sidebar
 Bar Banner
 -----------------------*/
 .bar-banner{
-  background-color: $red-base;
+  background-color: $red-base !important;
+  color: $white-base !important;
   padding: 30px;
   margin-bottom: 20px;
   position: relative;
+  -webkit-print-color-adjust: exact;
 
   &:after{
     content: "";
@@ -294,8 +307,9 @@ Bar Banner
     right: 0;
   }
 
-  h3, p, a{
-    color: $white-base;
+  h3, p, a, small{
+    color: $white-base !important;
+    -webkit-print-color-adjust: exact;
   }
 
   h3{
@@ -313,7 +327,8 @@ Bar Banner
   }
 
   .circle-icon{
-    background-color: darken($red-base, 10%);
+    background-color: darken($red-base, 10%) !important;
+    -webkit-print-color-adjust: exact;
   }
 }
 
@@ -325,13 +340,13 @@ Bar Banner
       width: 100%;
       margin-top: 5px;
 
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 768px), print {
         margin-top: 20px;
         width: auto;
       }
 
       &:not(:last-child){
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 768px), print {
           border-right: 1px solid $blue-grey-med;
           padding-right: 20px;
           margin-right: 20px;
@@ -419,7 +434,7 @@ Bar Banner
 .reg-actions-card{
   text-align: center;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px), print{
     margin-right: 2.35765%;
     width: 57.35098%;
     float: left;
@@ -433,7 +448,7 @@ Bar Banner
 
 .cases-card{
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px), print{
     width: 40.29137%;
     float: left;
     height: 225px;
@@ -508,11 +523,12 @@ Bar Banner
 }
 
 .note{
-  background-color: #CFD7DB;
+  background-color: #CFD7DB !important;
   display: inline-block;
   margin-top: 20px;
   padding: 30px;
   width: 100%;
+  -webkit-print-color-adjust: exact; 
 
   p:last-child{
     margin-bottom: 0px;
@@ -673,16 +689,17 @@ ul.timeline-events{
 
     &.green{
       .event{
-        background-color: $green-base;
+        background-color: $green-base !important;
+        -webkit-print-color-adjust: exact; 
       }
     }
 
     &.blue{
       .event{
-        background-color: $blue-grey-base;
+        background-color: $blue-grey-base !important;
+        -webkit-print-color-adjust: exact; 
       }
     }
-
   }
 
   .event{

@@ -7,7 +7,7 @@ Table
 .scrollable-table{
   overflow: auto;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px), print {
     overflow: visible;
   }
 
@@ -17,7 +17,7 @@ Table
     th{
       white-space: nowrap;
 
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1024px), print {
         max-width: 130px;
         vertical-align: bottom;
         white-space: normal;
@@ -40,7 +40,8 @@ th{
 }
 
 tr:nth-child(even){
-  background-color: $blue-grey-light;
+  background-color: $blue-grey-light !important;
+  -webkit-print-color-adjust: exact; 
 }
 
 
@@ -56,7 +57,7 @@ Blade Table
   thead{
     display: none;
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px), print{
       display: table-header-group;
     }
 
@@ -71,7 +72,7 @@ Blade Table
         box-shadow: none;
       }
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px), print{
         height: auto;
       }
 
@@ -123,7 +124,7 @@ Blade Table
       }
     }
 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px), print {
       display: inline-block;
       width: 48%;
       margin: 0 1%;
@@ -131,7 +132,7 @@ Blade Table
       margin-bottom: 20px;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px), print{
       border: none;
       display: table-row;
       width: 100%;
@@ -149,7 +150,7 @@ Blade Table
       display: block;
       font-size: 16px;
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px), print{
         display: table-cell;
         padding: 10px 20px 10px 0px;
         border-top: 1px solid $blue-grey-med;
@@ -157,10 +158,14 @@ Blade Table
 
       &:first-child{
         padding: 20px 0px;
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           padding: 10px 10px 10px 20px;
           border-left: 1px solid $blue-grey-med;
           min-width: 330px;
+        }
+
+        @media print {
+          min-width: 150px;
         }
       }
 
@@ -168,7 +173,7 @@ Blade Table
         border-bottom: none;
         padding-bottom: 0px;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           border-bottom: 1px solid $blue-grey-med;
           padding: 10px 20px;
         }
@@ -177,7 +182,7 @@ Blade Table
       &:nth-child(3){
         padding-top: 0px;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           padding: 10px 20px;
         }
       }
@@ -185,7 +190,7 @@ Blade Table
       &:nth-child(4){
         border-bottom: none;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           border-bottom: 1px solid $blue-grey-med;
         }
       }
@@ -194,7 +199,7 @@ Blade Table
         border-bottom: 0px;
         padding-bottom: 20px;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           border-right: 1px solid $blue-grey-med;
           border-bottom: 1px solid $blue-grey-med;
           padding-bottom: 0px;
@@ -208,14 +213,14 @@ Blade Table
         width: 100%;
         font-size: $s-small;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           display: none;
         }
       }
 
       span{
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           font-weight: bold;
           display: table-cell;
           height: 62px;
@@ -226,7 +231,7 @@ Blade Table
       }
 
       small{
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           font-weight: normal;
         }
       }
@@ -272,7 +277,7 @@ Blade Table
       background-color: #101d49;
     }
 
-    @media screen and (min-width: 1024px){
+    @media screen and (min-width: 1024px), print{
       display: none;
     }
   }
@@ -313,7 +318,7 @@ tr.highlight{
       border-radius: 4px;
       padding: 0px;
 
-      @media screen and (min-width: 1024px){
+      @media screen and (min-width: 1024px), print{
         top: 30px;
         right: 20px;
       }
@@ -336,7 +341,7 @@ tr.highlight{
         border: none;
         padding: 0px;
 
-        @media screen and (min-width: 1024px){
+        @media screen and (min-width: 1024px), print{
           margin: 0px 0px 0px 30px;
         }
       }
@@ -350,7 +355,7 @@ tr.highlight{
           display: inline-block;
           padding: 10px 0px 5px;
 
-          @media screen and (min-width: 1024px){
+          @media screen and (min-width: 1024px), print{
             padding: 10px 0px;
           }
         }
@@ -454,7 +459,7 @@ Table Filter
   border-top: 1px solid $blue-grey-med;
   padding: 10px 20px;
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px), print{
     display: none;
   }
 
@@ -495,7 +500,7 @@ Table Filter
 
 
 .th-wrap{
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 1024px), print{
     max-width: 180px;
     display: inline-block;
   }

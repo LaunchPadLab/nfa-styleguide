@@ -8,13 +8,6 @@ Empty State
     padding: 60px 20px;
   }
 
-  .icon{
-    background-color: lighten($purple-base, 50%);
-    border-radius: 20em;
-    height: 70px;
-    width: 70px;
-  }
-
   p{
     @include s-base;
     @include center;
