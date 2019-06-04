@@ -14,11 +14,13 @@ Side Navigation
     margin-top: 0px;
     margin-left: -5px;
     width: 260px;
-    position: absolute;
+    position: relative;
     top: -41px;
     bottom: 0px;
     left: 20px;
-    height: calc(100% + 57px);
+    margin-bottom: -16px;
+    display: inline-block;
+    align-self: stretch;
   }
 
   .logo{

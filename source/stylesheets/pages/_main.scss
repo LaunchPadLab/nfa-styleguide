@@ -262,7 +262,7 @@ Content with Sidebar
 
   @media screen and (min-width: 1024px){
     //margin-left: 260px;
-    padding: 40px 0px;
+    padding: 40px 0px 0px;
     //width: calc(100% - 260px);
   }
 
@@ -277,11 +277,32 @@ Content with Sidebar
   .container{
     //max-width: 990px;
     max-width: 75em;
+    @media screen and (min-width: 992px){
+      display: flex;
+    }
   }
 
   .main-text{
     //padding: 20px;
     padding: 0px;
+
+    @media screen and (min-width: 992px){
+      margin-left: 6% !important;
+      padding-bottom: 40px;
+    }
+  }
+
+  .row{
+    width: 100%;
+  }
+}
+
+.content-with-sidebar:not(:first-child){
+  .container{
+    @media screen and (min-width: 992px){
+      display: block;
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -507,6 +528,9 @@ Bar Banner
 
 
 .two-blades{
+  display: block;
+  width: calc(100% + 30px);
+  
   .card{
     @media screen and (min-width: 1024px){
       float: left;
