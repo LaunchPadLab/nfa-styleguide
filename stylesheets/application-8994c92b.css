@@ -564,11 +564,13 @@
         margin-top: 0px;
         margin-left: -5px;
         width: 260px;
-        position: absolute;
+        position: relative;
         top: -41px;
         bottom: 0px;
         left: 20px;
-        height: calc(100% + 57px); } }
+        margin-bottom: -16px;
+        display: inline-block;
+        align-self: stretch; } }
     .basic-wrapper .side-bar .logo {
       width: 75px;
       margin-bottom: 10px; }
@@ -984,15 +986,28 @@
     margin-top: -25px; }
     @media screen and (min-width: 1024px) {
       .basic-wrapper .content-with-sidebar {
-        padding: 40px 0px; } }
+        padding: 40px 0px 0px; } }
     .basic-wrapper .content-with-sidebar h1 {
       color: #4A4A4A; }
     .basic-wrapper .content-with-sidebar .red-alert {
       color: #DA4848; }
     .basic-wrapper .content-with-sidebar .container {
       max-width: 75em; }
+      @media screen and (min-width: 992px) {
+        .basic-wrapper .content-with-sidebar .container {
+          display: flex; } }
     .basic-wrapper .content-with-sidebar .main-text {
       padding: 0px; }
+      @media screen and (min-width: 992px) {
+        .basic-wrapper .content-with-sidebar .main-text {
+          margin-left: 6% !important;
+          padding-bottom: 40px; } }
+    .basic-wrapper .content-with-sidebar .row {
+      width: 100%; }
+  @media screen and (min-width: 992px) {
+    .basic-wrapper .content-with-sidebar:not(:first-child) .container {
+      display: block;
+      padding-bottom: 40px; } }
   .basic-wrapper .bar-banner {
     background-color: #DA4848 !important;
     color: #FFFFFF !important;
@@ -1119,14 +1134,17 @@
           content: "+"; }
       .basic-wrapper .panel-group .panel.card .card-header.panel-heading p {
         color: #49494a; }
-  @media screen and (min-width: 1024px) {
-    .basic-wrapper .two-blades .card {
-      float: left;
-      margin-right: 2.35765%;
-      width: 48.82117%; } }
-  @media screen and (min-width: 1024px) {
-    .basic-wrapper .two-blades .card:last-child {
-      margin: 0; } }
+  .basic-wrapper .two-blades {
+    display: block;
+    width: calc(100% + 30px); }
+    @media screen and (min-width: 1024px) {
+      .basic-wrapper .two-blades .card {
+        float: left;
+        margin-right: 2.35765%;
+        width: 48.82117%; } }
+    @media screen and (min-width: 1024px) {
+      .basic-wrapper .two-blades .card:last-child {
+        margin: 0; } }
   .basic-wrapper .note {
     background-color: #CFD7DB !important;
     display: inline-block;
